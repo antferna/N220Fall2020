@@ -1,3 +1,7 @@
+//Antonio Fernandez 
+//Assignent 5 
+//For this assignment I created a circle with the defined properities and then made it animate across the canvas
+
 var myCircle = {
     x: 45,
     y: 20,

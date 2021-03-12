@@ -1,3 +1,8 @@
+//Antonio Fernandez 
+//Assignent 5 
+//Below you can see tht I used object method to 
+//make an array of circles then in the draw functin use an if function to animate cirlces going down the canvas with different fill colors 
+
 var circles = [{x:75, y:50, r:7},
     {x:100, y:20, r:5},
     {x:5, y:10, r:2},
