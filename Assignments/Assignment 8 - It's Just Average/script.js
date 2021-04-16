@@ -20,7 +20,7 @@ function calcScores() {
         avg = (sum/myArray.length);
     }
 
-    console.log(sum);
+    console.log("The sum is ="+ sum);
 
-    console.log(avg);
+    console.log("The average is ="+ avg);
 }
