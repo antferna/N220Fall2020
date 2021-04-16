@@ -1,3 +1,7 @@
+//Antonio Fernandez Jr 
+//NewM-N220
+//Assignment 8 
+
 let txtExample = document.getElementById("txtExample");
 
 function calcScores() {
