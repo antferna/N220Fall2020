@@ -1,15 +1,23 @@
+//Antonio Fernanadez Jr 
+//Assignment 9 
+//NewM-N220
+
+
+//here I declared the colors 
 var plusRed = document.querySelectorAll("#red");
 var plusGreen = document.querySelectorAll("#green");
 var plusBlue = document.querySelectorAll("#blue");
 
 document.getElementById("colorPanel").setAttribute("style", "background-color: rgb(0,0,0);");
 
+//added an evenlistener to listen to the click
 for (var i = 0; i < plusRed.length; i++) {
 	plusRed[i].addEventListener('click', changeColor);
 	plusGreen[i].addEventListener('click', changeColor);
 	plusBlue[i].addEventListener('click', changeColor);
 }
 
+//function to handle the chcange in pixel 
 function changeColor(event) {
 	var color = document.getElementById("colorPanel").getAttribute("style", "background-color");
 	color = color.replace("background-color: rgb(", "").replace(");", "").split(',');
