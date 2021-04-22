@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style type="text/css">
+        * {
+            margin: 0 auto;
+            text-align: center;
+        }
+        #colorPanel {
+            width: 400px;
+            height: 200px;
+            background-color: rgb(0, 0, 0);
+        }
+        #displayColor {
+            width: 400px;
+            height: 70px;
+            background-color: #808080;
+        }
+    </style>
+
+
+    <div id="colorPanel">
+    </div>
+    <br/>
+    <div id="displayColor">
+        Current color RGB: (0, 0, 0)
+    </div>
+    <br/>
+    Red: <input type="button" id="red" data-type="red" data-increment="1" value="+1"/> <input type="button" id="red" data-type="red" data-increment="5" value="+5"/> <input type="button" id="red" data-type="red" data-increment="10" value="+10"/><br/>
+    Green: <input type="button" id="green" data-type="green" data-increment="1" value="+1"/> <input type="button" id="green" data-type="green" data-increment="5" value="+5"/> <input type="button" id="green" data-type="green" data-increment="10" value="+10"/><br/>
+    Blue: <input type="button" id="blue" data-type="blue" data-increment="1" value="+1"/> <input type="button" id="blue" data-type="blue" data-increment="5" value="+5"/> <input type="button" id="blue" data-type="blue" data-increment="10" value="+10"/><br/>
+
+</body>
+<script src="script.js"></script>
+</html>
