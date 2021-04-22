@@ -1,3 +1,7 @@
+//Antonio Fernandez Jr
+//Assignment 9 
+//NewM-N220 
+
 let element = document.getElementById("eventTest");
 element.addEventListener("click", itsClicked);
 
