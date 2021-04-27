@@ -13,7 +13,8 @@ function drawBarChart(males, females)
         .domain([0, 100])
         .range([BAR_CHART_HEIGHT, 0])
 
-    var g = d3.select('svg').select('#barchart');
+    var g = d3.select('#barchart');
+
     var yAxis = d3.svg.axis()
         .scale(yScale)
         .orient('left');
@@ -113,7 +114,7 @@ function drawScatterplot()
         .on('mouseover', function(d) {
             d3.select(this).style('fill', 'red')
             console.log('country: ' + d.country);
-
+            drawBarChart(d.maleJobParticipation, d.femaleJobParticipation);
 
         })
         .on('mouseout', function(d) {
