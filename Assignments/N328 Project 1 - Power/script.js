@@ -8,7 +8,10 @@
 		{
 			
 
-			var maxValue = d3.max(energyProduction);
+            var maxValue = d3.max(energyProduction);
+            
+            var group = d3.select('g');
+            group.selectAll('rect').data(energyProduction).enter().append('rect')
 
 		}
 			
