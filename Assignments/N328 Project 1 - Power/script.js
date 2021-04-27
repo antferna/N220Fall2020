@@ -37,7 +37,9 @@
 					else if (value === 'W') {
 						value = 0;
 					}
-					energyProduction.push(+value);
+                    energyProduction.push(+value);
+                    
+                    console.log(year + ' ' +value); 
 
 				}
 			}
