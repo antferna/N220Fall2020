@@ -37,15 +37,17 @@ function drawScatterPlot()
     g.append('g')
         .attr('class', 'axis')
         .call(yAxis);
-
-    g.selectAll('circle')
+    
+    var circles = g.selectAll('circle')
         .data(energyProduction)
         .enter()
         .append('circle')
+
+    circles 
         .style('fill', 'steelblue')
         .attr('r', 5)
-        // .attr('cx', function(d) { return ...... )})
-        // .attr('cy', .......);
+        .attr('cx', function(d) { return xScale(d.year)})
+        .attr('cy', function(d){ return yScale(d.production)});
 
 }
     
