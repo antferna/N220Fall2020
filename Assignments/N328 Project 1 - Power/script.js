@@ -11,8 +11,14 @@
             var maxValue = d3.max(energyProduction);
             
             var group = d3.select('g');
-            group.selectAll('rect').data(energyProduction).enter().append('rect')
+            
+            var rectangles = group.selectAll('rect').data(energyProduction).enter().append('rect');
 
+            rectangles
+                .attr('width',10)
+                .attr('x', function(d, i){ return i * 10})
+                .attr('height',function(d, i){return d})
+                .attr('y',function(d, i){ return 100-d})
 		}
 			
 
