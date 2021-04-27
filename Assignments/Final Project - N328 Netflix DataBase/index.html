@@ -1,13 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>N328 Visiualizing Information</title>
+	<title>Netflix Database</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+	<style>
+    	text { 
+			font-family: Arial; 
+			font-size: 13px;
+		}
+		.axis path, .axis line {
+			fill: none;
+			stroke: black;
+			shape-rendering: crispEdges;
+		}
+		.tick text {
+			fill: black;
+			font-size: 11px;
+		}
+
+		rect {
+			stroke: white;
+		}
+	</style>
 </head>
+
 <body>
-    
+	<svg width="800" height="600">
+		<g id="scatterplot" transform="translate(30,30)">
+			<text>Movie vs TV Shows on Netflix</text>
+
+
+		</g>
+		<g id="barchart" transform="translate(330,30)">
+			
+		</g>
+
+	</svg>
+
+
 </body>
 <script src="script.js"></script>
-<script src="https://d3js.org/d3.v6.js"></script>
 </html>
