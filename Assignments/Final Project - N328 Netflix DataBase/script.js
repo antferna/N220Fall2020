@@ -59,19 +59,19 @@ function drawScatterplot()
     var xScale = d3.scale.linear();
     var yScale = d3.scale.linear();
 
-    var maxRelease = d3.max(netflix_titles, function(d) { return d.releaseyear; })
-    var minRelease= d3.min(netflix_titles, function(d) { return d.releaseyear; })
+    var maxType = d3.max(netflix_titles, function(d) { return d.type; })
+    var minType= d3.min(netflix_titles, function(d) { return d.type; })
 
-    var maxDuration = d3.max(netflix_titles, function(d) { return d.duration; });
-    var minDuration = d3.min(netflix_titles, function(d) { return d.duration; })
+    var maxRating = d3.max(netflix_titles, function(d) { return d.rating; });
+    var minRating = d3.min(netflix_titles, function(d) { return d.rating; })
 
     xScale
-        .domain([minRelease, maxRelease])
+        .domain([minType, maxType])
         .range([0, CHART_WIDTH])
         .nice();
         
     yScale
-        .domain([minDuration, maxDuration])
+        .domain([minRating, maxRating])
         .range([CHART_HEIGHT, 0]);
 
         
@@ -107,13 +107,13 @@ function drawScatterplot()
     circles
         .style('fill', 'steelblue')
         .attr('r', 5)
-        .attr('cx', function(d) { return xScale(d.releaseyear) })
-        .attr('cy', function(d) { return yScale(d.duration) } );
+        .attr('cx', function(d) { return xScale(d.type) })
+        .attr('cy', function(d) { return yScale(d.rating) } );
 
     circles
         .on('mouseover', function(d) {
             d3.select(this).style('fill', 'red')
-            console.log('netflix_titles: ' + d.duration);
+            console.log('netflix_titles: ' + d.type);
             //drawBarChart(d.maleJobParticipation, d.femaleJobParticipation);
 
         })
