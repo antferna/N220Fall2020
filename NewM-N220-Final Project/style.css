@@ -18,3 +18,8 @@
 	cursor:pointer;
 	text-align:center;
 }
+ 
+body{
+    background-image: url("cool-background.png");
+    
+}
