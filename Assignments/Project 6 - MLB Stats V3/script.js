@@ -41,19 +41,39 @@ d3.csv('Batting.csv', function(data) {
       .attr("cy", function (d) { return y(d.HR); } )
       .attr("r", 1.5)
       .style("fill", "#69b3a2")
+      .on('mouseover',function(d){
+          d3.select(this).style('fill','red')
+          console.log('player:'+ d.playerID + ' HR:' + d.HR + ' Year:' + d.yearID);
+      })
 
   // new X axis
   x.domain([1871, 2015])
   svg.select(".myXaxis")
     .transition()
-    .duration(2000)
+    .duration(500)
     .attr("opacity", "1")
     .call(d3.axisBottom(x));
 
   svg.selectAll("circle")
     .transition()
-    .delay(function(d,i){return(i*6)})
-    .duration(10000)
+    .delay(function(d,i){return(i*3)})
+    .duration(500)
     .attr("cx", function (d) { return x(d.yearID); } )
     .attr("cy", function (d) { return y(d.HR); } )
+
+// Add X axis label:
+svg.append("text")
+.attr("text-anchor", "end")
+.attr("x", width)
+.attr("y", height + margin.top + 20)
+.text("Years");
+
+// Y axis label:
+svg.append("text")
+.attr("text-anchor", "end")
+.attr("transform", "rotate(-90)")
+.attr("y", -margin.left+20)
+.attr("x", -margin.top)
+.text("Home-Runs")
+
 })
